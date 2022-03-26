@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>KYUNGSOO</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/webdesign.css">
+	<script src="banner.js"></script>
+	<style type="text/css" media="screen">
+	@import url(kyungsoo.css);
+		hr{
+			color: black;
+			box-shadow: 0.5px 0.5px #C5C5C5;
+			margin-top: 5px;
+		}
+		header{
+			margin-left: 50px;
+
+		input[type=text]:hover{
+			background: #F3F3F3;
+		}
+	</style>
+
+</head>
+<body>
+<div style="margin-top: 10px;">
+<!-- <script src="banner.js"></script> -->
+<a href="loginForm.html" id="login" style="font-size: 13px; margin-left: 1030px">로그인</a> ㅣ 
+<a href="#" id="login" style="font-size: 13px;">회원가입</a> ㅣ
+<a href="#" id="login" style="font-size: 13px;">고객센터</a>
+</div>
+
+
+<header> <!-- 웹 상단에 로고 검색창 로그인 회원가입을 나타내는 코드-->
+<form name="fo" method="get">
+	<form name="search" onsubmit="return findlnPage(this.string.value);">
+		<a href="webmaking.html"><img src="images/title2.png" style="width: 200px; height: 90px;"></a>
+		<input type="text" name="string" onchange="n=0;"  placeholder="샤오미를 JENER에서 최저가로 만나보세요~" style="border:4px solid red; line-height: 100%; width: 600px; height: 50px; padding: 13px;"><input type="submit" style="background-color: red; border:4px solid red; line-height: 100%; width: 50px; height: 49.99px;"value="검색" name="검색" >
+		<span class="mypage">
+			<a href="#"><img style="width: 40px; height: 45px;"src="images/mypage.png"></a>
+			<img style="width: 1px; height: 30px; margin: 20px; "src="images/line.png">
+			<a href="#"><img style="width: 34px; height: 37px;" src="images/mypage2.png"></a>
+			<a href="#"><img style="width: 1.25px; height: 30px; margin: 20px;" src="images/line.png">
+				<img style="width: 34px; height: 37px;" src="images/mypage3.png"></a></span>
+	</form>
+</form>
+</header>
+
+<!-- 내비게이션 바 -->
+<section>
+<div>
+<nav id="menubar">
+	<ul>
+		<li><a href="samsungpage.html">삼성</a></li>
+		<li><a href="#">LG</a></li>
+		<li><a href="#">애플</a></li>
+		<li><a href="#">샤오미</a></li>
+		<li><a href="#">화웨이</a></li>
+		<li><a href="#">레노버</a></li>
+		<li><a href="#">에이수스</a></li>
+		<li><a href="eventpage.html">이벤트/쿠폰</a></li>
+	</ul>
+</nav>
+
+
+<section style="background-color: #E3DCC1;">
+<canvas id="selling" width="1920" height="300" style="background-color: #E3DCC1; width: 1260px; height: 290px;"></canvas>
+<section>
+	<script>
+		var canvas = document.getElementById("selling");
+		var context = canvas.getContext("2d");
+
+		var img = new Image();
+		img.onload = function (){
+			context.drawImage(img, 570, 5, 800,300);
+		}
+		img.src="images/event.png";
+			
+
+	</script>
+
+
+	<img src="images/1.png" style="width: 300px; height: 200px;"><br>
+	<img src="images/check.png" style="margin-left:80px; width: 350px; height: 350px;">
+	<img src="images/check2.png" style="margin-left:10px; width: 350px; height: 350px;">
+	<img src="images/check3.png" style="margin-left:10px; width: 350px; height: 350px;">
+	
+	<form>
+		<input type="image" id="image" name="출석체크버튼"  src="images/checkb.png" style="margin-left:320px; margin-top:50px;width: 270px; height: 80px; border:0px; outline: 0px;">
+		<input type="image" id="image" name="출석체크버튼"  src="images/checkb2.png" style="margin-left:20px; margin-top:50px;width: 270px; height: 80px; border:0px; outline: 0px;">
+	</form> 
+	
+		
+		
+	</script>
+	<img src="images/event2.png" onclick="on(this)" style="width: 300px; height: 200px;"><br>
+	<input type="image" onclick="f(event)" src="images/coupon.png" style="margin-left:100px; border: 0px; outline: 0px; width: 450px; height: 250px; ">
+	<input type="image" src="images/coupon2.png" style="margin-left:100px; border: 0px; outline: 0px;width: 450px; height: 250px; ">
+	<!-- <a href="#"><img style="margin-left:100px; width: 450px; height: 250px; position: relative;" src="coupon.png"></a>
+	<a href="#"><img style="margin-left:150px; width: 450px; height: 240px; position: relative;" src="coupon2.png"></a> -->
+	
+	<script type="text/javascript">
+		
+
+		function f(e){
+			alert("10%할인 쿠폰이 지급되었습니다.");
+		}
+		
+		var timerID = null;
+		function startTimer(time){
+			timerID = setTimeout("confirmr()",time);
+		}
+		function cancelTimer(){
+			if(timerID != null)
+				clearTimout(timerID);
+		}
+		function confirmr(){
+			alert("더 자세한 사항은 밑에 자세히 알아보기를 참고하세요.");
+		}
+
+	</script>
+	<img src="images/3.png" style="width: 300px; height: 200px;">
+	<img src="images/event5.png" onmouseover="startTimer(5000)" onmouseout="cancelTimer()" style="width: 1200px; height: 500px;"><br>
+<form>
+	<input type="button" style="margin-left:30px; width: 150px; height: 50px; border: 0px; outline: 0px; background-color: #E3DCC1;" value="> 자세히 알아보기" id="button">
+</form>
+<div id="div" style="margin-left:50px; color: black"></div>
+<script>
+		 var div = document.getElementById("div");
+		 var button = document.getElementById("button");
+
+
+		document.body.addEventListener("click", capture, true);
+		document.body.addEventListener("click", bubble, false);
+
+		function capture(e){
+			div.innerHTML += "1.100% 무료 배송 및 매 주 10% 할인쿠폰 지급<br>1-1: 회원비 (월 10,000원) 가입비(70,000원)<br>";
+		}
+
+		function bubble(e){
+			div.innerHTML += "2. 구매하는 상품 마다 할인된 회원가 적용";
+			stopImmediatePropagation();
+		}
+</script>
+</section>
+	
+<br><br>
+<footer style="background-color: white;">
+	<hr>
+	<nav id="menubar2">
+	<ul>
+		<li><a href="#">인재채용</a></li>
+		<li>|</li>
+		<li><a href="#">입점/제휴문의</a></li>
+		<li>|</li>
+		<li><a href="#">공지사항</a></li>
+		<li>|</li>
+		<li><a href="#">고객의 소리</a></li>
+		<li>|</li>
+		<li><a href="#">이용약관</a></li>
+		<li>|</li>
+		<li><a href="#"><span style="font-color:red;">개인정보 처리방침</span></a></li>
+		<li>|</li>
+		<li><a href="#">신뢰관리센터</a></li>
+	</ul>
+</nav>
+<hr>
+	<font face="함초롱바탕"></font>
+		<div class="row">
+					<div class="col-sm-2" style="text-align: center;"><a href="webmaking.html"><img src="images/footer.png" style="width: 200px; height: 100px;"></a></div>
+					<div class="col-sm-4" style="margin-top: 12px; "><h4 style="font-family: 함초롱바탕;">&#40;주&#41;제너</h4><p>제너는 통신 판매 중개자로서 거래 당사자가 아니며 입점 판매자가 등록한 상품, 거래정보 및 거래에 대하여 
+						제너는 일체의 책임을 지지 않습니다. 또한 무단복제, 전송, 배포, 스크래핑의 해우이는 관련법령에 걸립니다.
+					</p>
+				</div>
+				<div class="col-sm-4" style="margin-top: 15px;"><h4 style="text-align: left;">365고객센터</h4>						
+						<div class="list-group2">
+							<span class="footerr">1577-7011</span><br>
+							부산광역시 부산진구 엄광로 176 동의대학교 산학협력관<br>
+							Tel : 051-890-1114 | email : deu@deu.ac.kr
+							<!-- <a href="http://www.facebook.com"><img style="width: 40px; height: 50px;"src="footerlink.png"></a>
+							<a href="teacher.html"><img style="width: 40px; height: 50px;"src="footerlink.png"></a>
+							<a href="lecture.html"><img style="width: 40px; height: 50px;"src="footerlink.png"></a> -->
+						</div>
+					</div>
+					<div class="col-sm-2" style="margin-top: 15px;"><h4 style="text-align: left;">SNS</h4>						
+						<div class="list-group2">
+							<a href="http://www.facebook.com"><img style="width: 40px; height: 50px;"src="images/footerlink.png"></a>
+							<a href="teacher.html"><img style="width: 40px; height: 50px;"src="images/footerlink.png"></a>
+							<a href="lecture.html"><img style="width: 40px; height: 50px;"src="images/footerlink.png"></a>
+						</div>
+					</div>
+</body>
+</html>
